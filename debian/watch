@@ -1,0 +1,259 @@
+version=4
+
+opts=\
+dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-gulp-$1/ \
+ https://github.com/gulpjs/gulp/tags .*/archive/.*/v?([\d\.]+).tar.gz debian
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=gulp-cli" \
+ https://registry.npmjs.org/gulp-cli \
+ https://registry.npmjs.org/gulp-cli/-/gulp-cli-(\d[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=semver-greatest-satisfied-range" \
+ https://registry.npmjs.org/semver-greatest-satisfied-range \
+ https://registry.npmjs.org/semver-greatest-satisfied-range/-/semver-greatest-satisfied-range-(\d[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=sver-compat" \
+ https://registry.npmjs.org/sver-compat \
+ https://registry.npmjs.org/sver-compat/-/sver-compat-(\d[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=ansi-colors" \
+ https://registry.npmjs.org/ansi-colors \
+ https://registry.npmjs.org/ansi-colors/-/ansi-colors-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=ansi-wrap" \
+ https://registry.npmjs.org/ansi-wrap \
+ https://registry.npmjs.org/ansi-wrap/-/ansi-wrap-(0.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=color-support" \
+ https://registry.npmjs.org/color-support \
+ https://registry.npmjs.org/color-support/-/color-support-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=replace-homedir" \
+ https://registry.npmjs.org/replace-homedir \
+ https://registry.npmjs.org/replace-homedir/-/replace-homedir-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=homedir-polyfill" \
+ https://registry.npmjs.org/homedir-polyfill \
+ https://registry.npmjs.org/homedir-polyfill/-/homedir-polyfill-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-absolute" \
+ https://registry.npmjs.org/is-absolute \
+ https://registry.npmjs.org/is-absolute/-/is-absolute-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-relative" \
+ https://registry.npmjs.org/is-relative \
+ https://registry.npmjs.org/is-relative/-/is-relative-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=matchdep" \
+ https://registry.npmjs.org/matchdep \
+ https://registry.npmjs.org/matchdep/-/matchdep-(2.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=stack-trace" \
+ https://registry.npmjs.org/stack-trace \
+ https://registry.npmjs.org/stack-trace/-/stack-trace-(0.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=copy-props" \
+ https://registry.npmjs.org/copy-props \
+ https://registry.npmjs.org/copy-props/-/copy-props-(2.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=each-props" \
+ https://registry.npmjs.org/each-props \
+ https://registry.npmjs.org/each-props/-/each-props-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+# dpkg-source does not recognize . in component name so object.defaults changed to object-defaults
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=object-defaults" \
+ https://registry.npmjs.org/object.defaults \
+ https://registry.npmjs.org/object.defaults/-/object.defaults-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=array-slice" \
+ https://registry.npmjs.org/array-slice \
+ https://registry.npmjs.org/array-slice/-/array-slice-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=array-each" \
+ https://registry.npmjs.org/array-each \
+ https://registry.npmjs.org/array-each/-/array-each-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+# gulp-cli needs yargs 7.x and packaged version is 10.x
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=yargs" \
+ https://registry.npmjs.org/yargs \
+ https://registry.npmjs.org/yargs/-/yargs-(7.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=mute-stdout" \
+ https://registry.npmjs.org/mute-stdout \
+ https://registry.npmjs.org/mute-stdout/-/mute-stdout-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=array-sort" \
+ https://registry.npmjs.org/array-sort \
+ https://registry.npmjs.org/array-sort/-/array-sort-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=default-compare" \
+ https://registry.npmjs.org/default-compare \
+ https://registry.npmjs.org/default-compare/-/default-compare-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=undertaker" \
+ https://registry.npmjs.org/undertaker \
+ https://registry.npmjs.org/undertaker/-/undertaker-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=undertaker-registry" \
+ https://registry.npmjs.org/undertaker-registry \
+ https://registry.npmjs.org/undertaker-registry/-/undertaker-registry-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=collection-map" \
+ https://registry.npmjs.org/collection-map \
+ https://registry.npmjs.org/collection-map/-/collection-map-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=make-iterator" \
+ https://registry.npmjs.org/make-iterator \
+ https://registry.npmjs.org/make-iterator/-/make-iterator-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=arr-map" \
+https://registry.npmjs.org/arr-map \
+https://registry.npmjs.org/arr-map/-/arr-map-(2.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=bach" \
+https://registry.npmjs.org/bach \
+https://registry.npmjs.org/bach/-/bach-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=array-initial" \
+https://registry.npmjs.org/array-initial \
+https://registry.npmjs.org/array-initial/-/array-initial-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=array-last" \
+https://registry.npmjs.org/array-last \
+https://registry.npmjs.org/array-last/-/array-last-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=async-done" \
+https://registry.npmjs.org/async-done \
+https://registry.npmjs.org/async-done/-/async-done-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=stream-exhaust" \
+https://registry.npmjs.org/stream-exhaust \
+https://registry.npmjs.org/stream-exhaust/-/stream-exhaust-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=now-and-later" \
+https://registry.npmjs.org/now-and-later \
+https://registry.npmjs.org/now-and-later/-/now-and-later-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=arr-filter" \
+https://registry.npmjs.org/arr-filter \
+https://registry.npmjs.org/arr-filter/-/arr-filter-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=async-settle" \
+https://registry.npmjs.org/async-settle \
+https://registry.npmjs.org/async-settle/-/async-settle-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=last-run" \
+https://registry.npmjs.org/last-run \
+https://registry.npmjs.org/last-run/-/last-run-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=default-resolution" \
+https://registry.npmjs.org/default-resolution \
+https://registry.npmjs.org/default-resolution/-/default-resolution-(2.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=object-reduce" \
+https://registry.npmjs.org/object.reduce \
+https://registry.npmjs.org/object.reduce/-/object.reduce-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=glob-watcher" \
+https://registry.npmjs.org/glob-watcher \
+https://registry.npmjs.org/glob-watcher/-/glob-watcher-(5.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=just-debounce" \
+https://registry.npmjs.org/just-debounce \
+https://registry.npmjs.org/just-debounce/-/just-debounce-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=expect" \
+https://registry.npmjs.org/expect \
+https://registry.npmjs.org/expect/-/expect-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-regex" \
+https://registry.npmjs.org/is-regex \
+https://registry.npmjs.org/is-regex/-/is-regex-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=has" \
+https://registry.npmjs.org/has \
+https://registry.npmjs.org/has/-/has-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=tmatch" \
+https://registry.npmjs.org/tmatch \
+https://registry.npmjs.org/tmatch/-/tmatch-(2.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=define-properties" \
+https://registry.npmjs.org/define-properties \
+https://registry.npmjs.org/define-properties/-/define-properties-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=object-keys" \
+https://registry.npmjs.org/object-keys \
+https://registry.npmjs.org/object-keys/-/object-keys-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-equal" \
+https://registry.npmjs.org/is-equal \
+https://registry.npmjs.org/is-equal/-/is-equal-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-arrow-function" \
+https://registry.npmjs.org/is-arrow-function \
+https://registry.npmjs.org/is-arrow-function/-/is-arrow-function-(2.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-boolean-object" \
+https://registry.npmjs.org/is-boolean-object \
+https://registry.npmjs.org/is-boolean-object/-/is-boolean-object-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-date-object" \
+https://registry.npmjs.org/is-date-object \
+https://registry.npmjs.org/is-date-object/-/is-date-object-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-generator-function" \
+https://registry.npmjs.org/is-generator-function \
+https://registry.npmjs.org/is-generator-function/-/is-generator-function-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-number-object" \
+https://registry.npmjs.org/is-number-object \
+https://registry.npmjs.org/is-number-object/-/is-number-object-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-string" \
+https://registry.npmjs.org/is-string \
+https://registry.npmjs.org/is-string/-/is-string-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-symbol" \
+https://registry.npmjs.org/is-symbol \
+https://registry.npmjs.org/is-symbol/-/is-symbol-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=has-symbols" \
+https://registry.npmjs.org/has-symbols \
+https://registry.npmjs.org/has-symbols/-/has-symbols-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-callable" \
+https://registry.npmjs.org/is-callable \
+https://registry.npmjs.org/is-callable/-/is-callable-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=camelcase" \
+https://registry.npmjs.org/camelcase \
+https://registry.npmjs.org/camelcase/-/camelcase-(3.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=read-pkg-up" \
+https://registry.npmjs.org/read-pkg-up \
+https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=read-pkg" \
+https://registry.npmjs.org/read-pkg \
+https://registry.npmjs.org/read-pkg/-/read-pkg-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=load-json-file" \
+https://registry.npmjs.org/load-json-file \
+https://registry.npmjs.org/load-json-file/-/load-json-file-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=strip-bom" \
+https://registry.npmjs.org/strip-bom \
+https://registry.npmjs.org/strip-bom/-/strip-bom-(2.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-utf8" \
+https://registry.npmjs.org/is-utf8 \
+https://registry.npmjs.org/is-utf8/-/is-utf8-(0.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=pify" \
+https://registry.npmjs.org/pify \
+https://registry.npmjs.org/pify/-/pify-(2.[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=path-type" \
+https://registry.npmjs.org/path-type \
+https://registry.npmjs.org/path-type/-/path-type-(1.[\d\.]*)@ARCHIVE_EXT@ ignore

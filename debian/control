@@ -1,0 +1,99 @@
+Source: node-gulp
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , mocha
+ , node-archy
+ , node-arr-flatten
+ , node-chalk
+ , node-chokidar (>= 2.0~)
+ , node-concat-stream
+ , node-deprecated
+ , node-es6-weak-map
+ , node-find-up
+ , node-for-own
+ , node-function-bind
+ , node-get-value
+ , node-gulp-util
+ , node-interpret
+ , node-is-plain-object (>= 5~)
+ , node-is-unc-path (>= 1.0~)
+ , node-liftoff (>= 3.1~)
+ , node-marked-man
+ , node-minimist
+ , node-mkdirp (>= 1) <!nocheck>
+ , node-normalize-package-data
+ , node-object-inspect
+ , node-orchestrator
+ , node-parse-json
+ , node-pinkie-promise
+ , node-pretty-hrtime
+ , node-q
+ , node-rimraf
+ , node-semver (>= 4.1.0)
+ , node-set-blocking
+ , node-should
+ , node-string-width
+ , node-tildify
+ , node-v8flags
+ , node-vinyl-fs (>= 3.0.3-2~)
+ , node-y18n
+ , node-yargs-parser
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-gulp
+Vcs-Git: https://salsa.debian.org/js-team/node-gulp.git
+Homepage: https://gulpjs.com
+Rules-Requires-Root: no
+
+Package: gulp
+Architecture: all
+Depends: ${misc:Depends}
+ , node-archy
+ , node-arr-flatten
+ , node-chalk
+ , node-chokidar (>= 2.0~)
+ , node-concat-stream
+ , node-defaults
+ , node-deprecated
+ , node-es6-weak-map
+ , node-find-up
+ , node-for-own
+ , node-get-value
+ , node-globule
+ , node-gulp-util
+ , node-interpret
+ , node-is-plain-object (>= 5~)
+ , node-is-unc-path (>= 1.0~)
+ , node-liftoff (>= 3.1~)
+ , node-minimist
+ , node-normalize-package-data
+ , node-orchestrator
+ , node-parse-json
+ , node-pinkie-promise
+ , node-pretty-hrtime
+ , node-semver (>= 4.1.0)
+ , node-set-blocking
+ , node-string-width
+ , node-tildify
+ , node-v8flags
+ , node-vinyl-fs (>= 3.0.3-2~)
+ , node-y18n
+ , node-yargs-parser
+ , nodejs:any
+Provides: node-gulp, ${nodejs:Provides}
+Description: streaming build system to automate painful or time-consuming tasks
+ gulp is a toolkit that helps you automate painful or time-consuming tasks in
+ your development workflow.
+ .
+ Platform-agnostic - Integrations are built into all major IDEs and people are
+ using gulp with PHP, .NET, Node.js, Java, and other platforms.
+ Strong Ecosystem - Use npm modules to do anything you want + over 2000 curated
+ plugins for streaming file transformations
+ Simple - By providing only a minimal API surface, gulp is easy to learn and
+ simple to use
+ .
+ Node.js is an event-based server-side JavaScript engine.

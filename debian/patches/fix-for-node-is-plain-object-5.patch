@@ -1,0 +1,26 @@
+Description: fix for node-is-plain-object ≥ 5
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2021-11-12
+
+--- a/copy-props/index.js
++++ b/copy-props/index.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ 
+ var eachProps = require('each-props');
+-var isPlainObject = require('is-plain-object');
++var {isPlainObject} = require('is-plain-object');
+ 
+ module.exports = function(src, dst, fromto, converter, reverse) {
+ 
+--- a/each-props/index.js
++++ b/each-props/index.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-var isPlainObject = require('is-plain-object');
++var {isPlainObject} = require('is-plain-object');
+ var defaults = require('object.defaults/immutable');
+ 
+ module.exports = function(obj, fn, opts) {
