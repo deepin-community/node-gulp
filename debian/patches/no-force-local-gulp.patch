@@ -1,8 +1,8 @@
 Description: No force local gulp
 --- a/gulp-cli/index.js
 +++ b/gulp-cli/index.js
-@@ -168,7 +168,8 @@
-         ? 'npm install'
+@@ -178,7 +178,8 @@
+           ? 'yarn add gulp'
          : 'npm install gulp';
      log.error(ansi.red('Try running: ' + installCommand));
 -    exit(1);
@@ -11,7 +11,7 @@ Description: No force local gulp
    }
  
    if (!env.configPath) {
-@@ -187,7 +188,9 @@
+@@ -197,7 +198,9 @@
    }
  
    // Find the correct CLI version to run

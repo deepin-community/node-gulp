@@ -1,19 +1,23 @@
-# Data
-source: very-long-line-length-in-source-file expect/lib/Expectation.js line length is 564 characters (>512)
-source: source-contains-prebuilt-javascript-object expect/lib/Expectation.js line length is 564 characters (>512)
-source: source-is-missing expect/lib/Expectation.js line length is 564 characters (>512)
-source: very-long-line-length-in-source-file expect/umd/expect.js line length is 565 characters (>512)
-source: source-contains-prebuilt-javascript-object expect/umd/expect.js line length is 564 characters (>512)
-source: source-is-missing expect/umd/expect.js line length is 564 characters (>512)
-source: source-contains-prebuilt-javascript-object expect/umd/expect.min.js
-# Unused files
-source: source-contains-browserified-javascript expect/umd/expect.js code *
-source: source-is-missing tmatch/coverage/prettify.js line length is 17568 characters (>512)
-source: source-contains-prebuilt-javascript-object tmatch/coverage/lcov-report/prettify.js line length is 17568 characters (>512)
-source: source-contains-prebuilt-javascript-object tmatch/coverage/prettify.js line length is 17568 characters (>512)
-source: very-long-line-length-in-source-file tmatch/coverage/lcov-report/prettify.js line length is 17568 characters (>512)
-source: very-long-line-length-in-source-file tmatch/coverage/prettify.js line length is 17568 characters (>512)
-# Strange
-source: field-too-long Checksums-Sha1 (5670 chars > 5000)
-source: field-too-long Checksums-Sha256 (7230 chars > 5000)
-source: field-too-long Files (5150 chars > 5000)
+# Same authors
+add-component-copyright async-done [debian/copyright]
+add-component-copyright async-settle [debian/copyright]
+add-component-copyright bach [debian/copyright]
+add-component-copyright default-resolution [debian/copyright]
+add-component-copyright eslint-config-gulp [debian/copyright]
+add-component-copyright glob-watcher [debian/copyright]
+add-component-copyright last-run [debian/copyright]
+add-component-copyright now-and-later [debian/copyright]
+add-component-copyright stream-exhaust [debian/copyright]
+add-component-copyright undertaker [debian/copyright]
+add-component-copyright undertaker-registry [debian/copyright]
+
+# Test files
+source-is-missing [arr-map/benchmark/fixtures/med.js]
+source-is-missing [debian/tests/test_modules/expect/lib/Expectation.js]
+source-contains-prebuilt-javascript-object [arr-map/benchmark/fixtures/med.js]
+source-contains-prebuilt-javascript-object [debian/tests/test_modules/expect/lib/Expectation.js]
+very-long-line-length-in-source-file 801 > 512 [arr-map/benchmark/fixtures/med.js:1]
+very-long-line-length-in-source-file 564 > 512 [debian/tests/test_modules/expect/lib/Expectation.js:9]
+
+# Noise
+very-long-line-length-in-source-file * [*.md:*]

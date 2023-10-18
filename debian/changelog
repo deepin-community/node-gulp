@@ -1,3 +1,81 @@
+node-gulp (4.0.2+~cs54.26.36-6) unstable; urgency=medium
+
+  * Team upload
+  * Drop dandling link
+  * Update lintian override info format in d/source/lintian-overrides
+    on line 15-20, 23
+  * Update standards version to 4.6.1, no changes needed
+  * Fix test files to drop __proto__ calls
+
+ -- Yadd <yadd@debian.org>  Wed, 30 Nov 2022 23:28:47 +0100
+
+node-gulp (4.0.2+~cs54.26.36-5) unstable; urgency=medium
+
+  * Team upload
+  * Drop help snapshot tests: output changes with yargs-parser ≥ 2à
+
+ -- Yadd <yadd@debian.org>  Thu, 13 Jan 2022 15:21:10 +0100
+
+node-gulp (4.0.2+~cs54.26.36-4) unstable; urgency=medium
+
+  * Team upload
+  * Drop one test that fails with debci
+
+ -- Yadd <yadd@debian.org>  Sun, 26 Dec 2021 12:59:55 +0100
+
+node-gulp (4.0.2+~cs54.26.36-3) unstable; urgency=medium
+
+  * Team upload
+  * Add dependency to node-minimist (Closes: #1002280)
+  * Add dependency to node-object-inspect
+
+ -- Yadd <yadd@debian.org>  Tue, 21 Dec 2021 18:12:09 +0100
+
+node-gulp (4.0.2+~cs54.26.36-2) unstable; urgency=medium
+
+  * Team upload
+  * Add fix for yargs ≥ 15 (--help did not work)
+  * Add test for gulp-cli
+
+ -- Yadd <yadd@debian.org>  Fri, 17 Dec 2021 10:52:15 +0100
+
+node-gulp (4.0.2+~cs54.26.36-1) unstable; urgency=medium
+
+  * Team upload
+  * Add missing components for gulp-cli and repack
+  * New upstream version 4.0.2+~cs54.26.36
+  * Update dependencies
+  * Update copyright
+
+ -- Yadd <yadd@debian.org>  Thu, 16 Dec 2021 18:31:38 +0100
+
+node-gulp (4.0.2+~cs38.20.35-1) unstable; urgency=medium
+
+  * Team upload
+  * debian/watch:
+    + Use uscan checksum
+    + download fro source(GitHub), not npm registry
+  * Drop update-process-nextick-args.patch, now included in upstream
+  * Replace components by array-initial, array-last, arr-filter, arr-map,
+    async-done, async-settle, bach, collection-map, default-resolution,
+    eslint-config-gulp, glob-watcher, just-debounce, last-run, now-and-later,
+    object-reduce, stream-exhaust, undertaker, undertaker-registry
+  * New upstream version 4.0.2+~cs38.20.35, updates:
+    + default-resolution: 3.0.0
+    + gulp-cli: 2.3.0
+    + just-debounce: 1.1.0 (needed to build babel 7.16.6)
+    + typescript declarations
+  * Drop update-now-and-later-to-2.patch, now included in upstream
+  * Refresh patches
+  * Embed some little modules for test only
+  * Update copyright
+  * Install components in nodejs root directories
+  * Reduce dependencies to those really needed
+  * Update copyright
+  * Update lintian overrides
+
+ -- Yadd <yadd@debian.org>  Thu, 16 Dec 2021 17:15:06 +0100
+
 node-gulp (4.0.2-9) unstable; urgency=medium
 
   * Team upload

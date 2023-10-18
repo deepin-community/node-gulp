@@ -27,6 +27,10 @@ function mapSeries(values, iterator, extensions, done) {
 
   var exts = helpers.defaultExtensions(extensions);
 
+  if (length === 0) {
+    return done(null, results);
+  }
+
   var key = keys[idx];
   next(key);
 
@@ -36,7 +40,7 @@ function mapSeries(values, iterator, extensions, done) {
     var storage = exts.create(value, key) || {};
 
     exts.before(storage);
-    iterator(value, once(handler));
+    iterator(value, key, once(handler));
 
     function handler(err, result) {
       if (err) {

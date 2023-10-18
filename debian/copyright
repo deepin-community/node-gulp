@@ -2,105 +2,99 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: gulp
 Upstream-Contact: https://github.com/gulpjs/gulp/issues
 Source: https://gulpjs.com
- https://registry.npmjs.org/arr-map
- https://registry.npmjs.org/bach
- https://registry.npmjs.org/array-initial
- https://registry.npmjs.org/array-last
- https://registry.npmjs.org/async-done
- https://registry.npmjs.org/stream-exhaust
- https://registry.npmjs.org/now-and-later
- https://registry.npmjs.org/arr-filter
- https://registry.npmjs.org/async-settle
- https://registry.npmjs.org/last-run
- https://registry.npmjs.org/default-resolution
- https://registry.npmjs.org/object.reduce
- https://registry.npmjs.org/glob-watcher
- https://registry.npmjs.org/just-debounce
- https://registry.npmjs.org/expect
- https://registry.npmjs.org/is-regex
- https://registry.npmjs.org/has
- https://registry.npmjs.org/tmatch
- https://registry.npmjs.org/define-properties
- https://registry.npmjs.org/object-keys
- https://registry.npmjs.org/is-equal
- https://registry.npmjs.org/is-arrow-function
- https://registry.npmjs.org/is-boolean-object
- https://registry.npmjs.org/is-date-object
- https://registry.npmjs.org/is-generator-function
- https://registry.npmjs.org/is-number-object
- https://registry.npmjs.org/is-string
- https://registry.npmjs.org/is-symbol
- https://registry.npmjs.org/has-symbols
- https://registry.npmjs.org/is-callable
- https://registry.npmjs.org/camelcase
- https://registry.npmjs.org/read-pkg-up
- https://registry.npmjs.org/read-pkg
- https://registry.npmjs.org/load-json-file
- https://registry.npmjs.org/strip-bom
- https://registry.npmjs.org/is-utf8
- https://registry.npmjs.org/pify
- https://registry.npmjs.org/path-type
+ https://github.com/jonschlinkert/array-initial/tags
+ https://github.com/jonschlinkert/array-last/tags
+ https://github.com/jonschlinkert/arr-filter/tags
+ https://github.com/jonschlinkert/arr-map/tags
+ https://github.com/gulpjs/async-done/tags
+ https://github.com/gulpjs/async-settle/tags
+ https://github.com/gulpjs/bach/tags
+ https://github.com/jonschlinkert/collection-map/tags
+ https://github.com/gulpjs/default-resolution/tags
+ https://github.com/gulpjs/eslint-config-gulp/tags
+ https://github.com/gulpjs/glob-watcher/tags
+ https://github.com/hayes/just-debounce/tags
+ https://github.com/gulpjs/last-run/tags
+ https://github.com/gulpjs/now-and-later/tags
+ https://github.com/chrisdickinson/stream-exhaust/tags
+ https://github.com/gulpjs/undertaker/tags
+ https://github.com/gulpjs/undertaker-registry/tags
+ https://registry.npmjs.org/@types/gulp
+ https://registry.npmjs.org/@types/undertaker
+ https://registry.npmjs.org/@types/undertaker-registry
+ https://github.com/jonschlinkert/array-sort/tags
+ https://github.com/doowb/default-compare/tags
+ https://github.com/gulpjs/copy-props/tags
+ https://github.com/gulpjs/each-props/tags
+ https://github.com/tkellen/js-matchdep/tags
+ https://github.com/gulpjs/mute-stdout/tags
+ https://github.com/gulpjs/replace-homedir/tags
+ https://github.com/jonschlinkert/is-absolute/tags
+ https://github.com/jonschlinkert/is-relative/tags
+ https://github.com/gulpjs/semver-greatest-satisfied-range/tags
+ https://github.com/phated/sver-compat/tags
 
 Files: *
-Copyright: 2013-2018, Blaine Bublitz <blaine.bublitz@gmail.com>, Eric Schoffstall <yo@contra.io> and other contributors
-  2013-2016, Fractal <contact@wearefractal.com>
+Copyright: 2013-2018, Blaine Bublitz <blaine.bublitz@gmail.com>
+ 2013-2018 Eric Schoffstall <yo@contra.io> and other contributors
 License: Expat
 
-Files: ansi-colors/*
-Copyright: 2015-2017, Brian Woodward.
-License: Expat
-
-Files: arr-filter/*
+Files:
+ array-initial/*
+ array-last/*
+ array-sort/*
+ arr-filter/*
+ arr-map/*
+ collection-map/*
+ is-relative/*
+ object-reduce/*
 Copyright: 2014-2018, Jon Schlinkert.
 License: Expat
 
-Files: arr-map/*
-Copyright: 2014-2018, Jon Schlinkert.
+Files: copy-props/*
+Copyright: 2016-2021 Takayuki Sato <sttk.xslet@gmail.com>
+ 2016-2021 Blaine Bublitz <blaine.bublitz@gmail.com>
+ 2016-2021 Eric Schoffstall <yo@contra.io>
 License: Expat
-
-Files: array-each/index.js
-Copyright: 2014-2018, Jon Schlinkert.
-License: Expat
-
-Files: array-initial/*
-Copyright: 2014, Jon Schlinkert
-License: Expat
-
-Files: array-initial/index.js
-Copyright: 2014, Jon Schlinkert, contributors.
-License: Expat
-
-Files: array-last/*
-Copyright: 2014-2018, Jon Schlinkert.
-License: Expat
-
-Files: array-slice/*
-Copyright: 2014-2018, Jon Schlinkert.
-License: Expat
-
-Files: array-sort/*
-Copyright: 2014-2018, Jon Schlinkert.
-License: Expat
-
-Files: async-settle/*
-Copyright: 2014, Blaine Bublitz, Eric Schoffstall and other contributors
-License: Expat
-
-Files: collection-map/*
-Copyright: 2014-2018, Jon Schlinkert.
-License: Expat
-
-Files: color-support/*
-Copyright: Isaac Z. Schlueter and Contributors
-License: ISC
 
 Files: debian/*
-Copyright: 2019, Yadd <yadd@debian.org>
+Copyright: 2019-2021, Yadd <yadd@debian.org>
   2016, Pirate Praveen <praveen@debian.org>
 License: Expat
 
+Files: debian/tests/gulp-cli/*
+Copyright: 2013-2018, Blaine Bublitz <blaine.bublitz@gmail.com>
+ 2013-2018 Eric Schoffstall <yo@contra.io> and other contributors
+License: Expat
+
+Files: debian/tests/test_modules/*
+Copyright: 2013-2019 Jordan Harband
+License: Expat
+
+Files: debian/tests/test_modules/expect/*
+Copyright: 2015 Michael Jackson
+License: Expat
+
+Files: debian/tests/test_modules/gulp-test-tools/*
+Copyright: 2016 Takayuki Sato
+License: Expat
+
+Files: debian/tests/test_modules/is-finalizationregistry/*
+ debian/tests/test_modules/is-weakref/*
+Copyright: 2020 Inspect JS
+License: Expat
+
+Files: debian/tests/test_modules/object.getprototypeof/*
+Copyright: 2014 Shahar Or and contributors
+License: Expat
+
+Files: debian/tests/test_modules/reflect.getprototypeof/*
+ debian/tests/test_modules/which-builtin-type/*
+Copyright: 2020-2021 ECMAScript Shims
+License: Expat
+
 Files: default-compare/*
-Copyright: 2017, Brian Woodward
+Copyright: 2017 Brian Woodward
 License: Expat
 
 Files: docs/*
@@ -109,16 +103,9 @@ License: public-domain
 Comment: To the extent possible under law, Fractal has waived all copyright
  and related or neighboring rights to this work.
 
-Files: each-props/*
-Copyright: 2016, Takayuki Sato
-License: Expat
-
-Files: expect/*
-Copyright: 2015, Michael Jackson
-License: Expat
-
 Files: gulp-cli/completion/bash
   gulp-cli/completion/zsh
+  matchdep/*
 Copyright: 2012, Tyler Kellen, contributors
 License: Expat
 
@@ -126,47 +113,21 @@ Files: gulp-cli/completion/powershell
 Copyright: 2014, Jason Jarrett
 License: Expat
 
-Files: homedir-polyfill/*
-Copyright: 2016, Brian Woodward
-License: Expat
-
 Files: is-absolute/*
-Copyright: 2014-2017, Jon Schlinkert
-  2009-2014, TJ Holowaychuk
+Copyright: 2014-2017 Jon Schlinkert
+ 2009-2014 TJ Holowaychuk
 License: Expat
 
-Files: make-iterator/*
-Copyright: 2014-2018, Jon Schlinkert.
-  2012, 2013 moutjs team and contributors (http://moutjs.com)
+Files: just-debounce/*
+Copyright: 2014 Michael Hayes
 License: Expat
 
-Files: matchdep/*
-Copyright: 2012, 2013, Tyler Kellen
+Files: sver-compat/*
+Copyright: 2017 Guy Bedford
 License: Expat
 
-Files: matchdep/lib/*
-Copyright: 2012, Tyler Kellen
-License: Expat
-
-Files: object-defaults/*
-Copyright: 2014-2018, Jon Schlinkert.
-License: Expat
-
-Files: object-reduce/*
-Copyright: 2014-2018, Jon Schlinkert.
-License: Expat
-
-Files: stack-trace/*
-Copyright: 2011, Felix Geisendörfer (felix@debuggable.com)
-License: Expat
-
-Files: yargs/*
-Copyright: 2014, Contributors (ben@npmjs.com)
-  2010, James Halliday (mail@substack.net)
-License: Expat
-
-Files: yargs/lib/levenshtein.js
-Copyright: 2011, Andrei Mackenzie
+Files: types-*/*
+Copyright: Microsoft Corporation
 License: Expat
 
 License: Expat
@@ -189,19 +150,6 @@ License: Expat
  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
-
-License: ISC
- Permission to use, copy, modify, and/or distribute this software for any
- purpose with or without fee is hereby granted, provided that the above
- copyright notice and this permission notice appear in all copies.
- .
- THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
- WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
- MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
- ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
- WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
- ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
- IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 License: public-domain
  All the documentation is covered by the CC0 license *(do whatever you want
