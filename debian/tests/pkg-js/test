@@ -1,1 +1,1 @@
-mocha -R spec
+mocha --exit

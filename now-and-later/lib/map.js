@@ -28,6 +28,10 @@ function map(values, iterator, extensions, done) {
 
   var exts = helpers.defaultExtensions(extensions);
 
+  if (length === 0) {
+    return done(null, results);
+  }
+
   for (idx = 0; idx < length; idx++) {
     var key = keys[idx];
     next(key);
@@ -39,7 +43,7 @@ function map(values, iterator, extensions, done) {
     var storage = exts.create(value, key) || {};
 
     exts.before(storage);
-    iterator(value, once(handler));
+    iterator(value, key, once(handler));
 
     function handler(err, result) {
       if (err) {

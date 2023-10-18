@@ -5,45 +5,64 @@ Section: javascript
 Testsuite: autopkgtest-pkg-nodejs
 Priority: optional
 Build-Depends: debhelper-compat (= 13)
- , mocha
- , node-archy
- , node-arr-flatten
- , node-chalk
- , node-chokidar (>= 2.0~)
- , node-concat-stream
- , node-deprecated
- , node-es6-weak-map
- , node-find-up
- , node-for-own
- , node-function-bind
- , node-get-value
- , node-gulp-util
- , node-interpret
- , node-is-plain-object (>= 5~)
- , node-is-unc-path (>= 1.0~)
- , node-liftoff (>= 3.1~)
- , node-marked-man
- , node-minimist
- , node-mkdirp (>= 1) <!nocheck>
- , node-normalize-package-data
- , node-object-inspect
- , node-orchestrator
- , node-parse-json
- , node-pinkie-promise
- , node-pretty-hrtime
- , node-q
- , node-rimraf
- , node-semver (>= 4.1.0)
- , node-set-blocking
- , node-should
- , node-string-width
- , node-tildify
- , node-v8flags
- , node-vinyl-fs (>= 3.0.3-2~)
- , node-y18n
- , node-yargs-parser
  , dh-sequence-nodejs
-Standards-Version: 4.6.0
+ , mocha <!nocheck>
+ , node-ansi-colors <!nocheck>
+ , node-anymatch <!nocheck>
+ , node-archy <!nocheck>
+ , node-arr-flatten <!nocheck>
+ , node-array-each <!nocheck>
+ , node-array-slice <!nocheck>
+ , node-chokidar <!nocheck>
+ , node-concat-stream <!nocheck>
+ , node-define-properties <!nocheck>
+ , node-end-of-stream <!nocheck>
+ , node-es6-iterator <!nocheck>
+ , node-es6-symbol <!nocheck>
+ , node-es6-weak-map <!nocheck>
+ , node-expand-tilde <!nocheck>
+ , node-fancy-log <!nocheck>
+ , node-fast-levenshtein <!nocheck>
+ , node-findup-sync <!nocheck>
+ , node-fined <!nocheck>
+ , node-for-own <!nocheck>
+ , node-get-value <!nocheck>
+ , node-gulplog <!nocheck>
+ , node-has <!nocheck>
+ , node-interpret <!nocheck>
+ , node-is-generator-function <!nocheck>
+ , node-is-negated-glob <!nocheck>
+ , node-is-number <!nocheck>
+ , node-is-plain-object <!nocheck>
+ , node-is-regex <!nocheck>
+ , node-is-unc-path <!nocheck>
+ , node-is-windows <!nocheck>
+ , node-isobject <!nocheck>
+ , node-kind-of <!nocheck>
+ , node-liftoff <!nocheck>
+ , node-make-iterator <!nocheck>
+ , node-marked-man
+ , node-micromatch <!nocheck>
+ , node-minimist <!nocheck>
+ , node-mkdirp (>= 1) <!nocheck>
+ , node-normalize-path <!nocheck>
+ , node-object-inspect <!nocheck>
+ , node-once <!nocheck>
+ , node-parse-node-version <!nocheck>
+ , node-pretty-hrtime <!nocheck>
+ , node-process-nextick-args <!nocheck>
+ , node-remove-trailing-separator <!nocheck>
+ , node-resolve <!nocheck>
+ , node-rimraf <!nocheck>
+ , node-stack-trace <!nocheck>
+ , node-tmatch <!nocheck>
+ , node-v8flags <!nocheck>
+ , node-vinyl-fs <!nocheck>
+ , node-yargs <!nocheck>
+# for gulp-cli test
+ , node-fs-extra <!nocheck>
+ , node-semver <!nocheck>
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-gulp
 Vcs-Git: https://salsa.debian.org/js-team/node-gulp.git
 Homepage: https://gulpjs.com
@@ -52,39 +71,52 @@ Rules-Requires-Root: no
 Package: gulp
 Architecture: all
 Depends: ${misc:Depends}
+ , node-ansi-colors
+ , node-anymatch
  , node-archy
  , node-arr-flatten
- , node-chalk
- , node-chokidar (>= 2.0~)
+ , node-array-each
+ , node-array-slice
+ , node-chokidar
  , node-concat-stream
- , node-defaults
- , node-deprecated
+ , node-end-of-stream
+ , node-es6-iterator
+ , node-es6-symbol
  , node-es6-weak-map
- , node-find-up
+ , node-expand-tilde
+ , node-fancy-log
+ , node-fast-levenshtein
+ , node-findup-sync
+ , node-fined
  , node-for-own
  , node-get-value
- , node-globule
- , node-gulp-util
+ , node-gulplog
  , node-interpret
- , node-is-plain-object (>= 5~)
- , node-is-unc-path (>= 1.0~)
- , node-liftoff (>= 3.1~)
+ , node-is-negated-glob
+ , node-is-number
+ , node-is-plain-object (>= 5.0.0-5~)
+ , node-is-unc-path
+ , node-is-windows
+ , node-isobject
+ , node-kind-of
+ , node-liftoff
+ , node-make-iterator
+ , node-micromatch
  , node-minimist
- , node-normalize-package-data
- , node-orchestrator
- , node-parse-json
- , node-pinkie-promise
+ , node-normalize-path
+ , node-object-inspect
+ , node-once
+ , node-parse-node-version
  , node-pretty-hrtime
- , node-semver (>= 4.1.0)
- , node-set-blocking
- , node-string-width
- , node-tildify
+ , node-process-nextick-args
+ , node-remove-trailing-separator
+ , node-resolve
+ , node-stack-trace
  , node-v8flags
- , node-vinyl-fs (>= 3.0.3-2~)
- , node-y18n
- , node-yargs-parser
+ , node-vinyl-fs
+ , node-yargs
  , nodejs:any
-Provides: node-gulp, ${nodejs:Provides}
+Provides: ${nodejs:Provides}
 Description: streaming build system to automate painful or time-consuming tasks
  gulp is a toolkit that helps you automate painful or time-consuming tasks in
  your development workflow.

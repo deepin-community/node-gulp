@@ -1,6 +1,2 @@
-gulp: bad-whatis-entry usr/share/man/man1/gulp.1.gz
 # Usually called with eval "$(gulp --completion=bash)"
-gulp: script-not-executable usr/share/nodejs/gulp-cli/completion/bash
-gulp: script-not-executable usr/share/nodejs/gulp-cli/completion/fish
-gulp: script-not-executable usr/share/nodejs/gulp-cli/completion/zsh
-gulp: script-not-executable usr/share/nodejs/gulp/node_modules/color-support/bin.js
+script-not-executable *usr/share/nodejs/gulp-cli/completion/*
